@@ -32,9 +32,9 @@ export default function Shop() {
     },
   ];
   return (
-    <div className='text-3xl font-bold underline'>
+    <div className='w-full flex flex-wrap justify-between'>
       {categories.map(({id, title, imageUrl}) => (
-        <Link key='id' href={`/shop/${title}`}><CategoryCard title={title} imageUrl={imageUrl} /></Link>
+        <CategoryCard key={id} title={title} imageUrl={imageUrl} />
       ))}
     </div>
   )
