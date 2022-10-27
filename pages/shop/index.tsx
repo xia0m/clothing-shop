@@ -34,7 +34,7 @@ export default function Shop() {
   return (
     <div className='text-3xl font-bold underline'>
       {categories.map(({id, title, imageUrl}) => (
-        <Link key='id' href={`/shop/${title}`}><CategoryCard title={title} /></Link>
+        <Link key='id' href={`/shop/${title}`}><CategoryCard title={title} imageUrl={imageUrl} /></Link>
       ))}
     </div>
   )
