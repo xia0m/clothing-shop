@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
 import CategoryCard from '../../components/CategoryCard';
 
 export default function Shop() {
@@ -32,10 +32,10 @@ export default function Shop() {
     },
   ];
   return (
-    <div className='w-full flex flex-wrap justify-between'>
-      {categories.map(({id, title, imageUrl}) => (
+    <div className="w-full flex flex-wrap justify-between">
+      {categories.map(({ id, title, imageUrl }) => (
         <CategoryCard key={id} title={title} imageUrl={imageUrl} />
       ))}
     </div>
-  )
+  );
 }
