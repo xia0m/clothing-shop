@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Fragment } from 'react';
 
-export default function Navigation() {
+export default function NavBar() {
   return (
     <Fragment>
       <div>

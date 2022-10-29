@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import CategoryCard from '../../components/CategoryCard';
-import Navigation from '../../components/Navigation';
+import Navigation from '../../components/NavBar';
 
 export default function Shop() {
   const categories = [
@@ -35,7 +35,6 @@ export default function Shop() {
   return (
     <div>
       <div className="w-full flex flex-wrap justify-between">
-        <Navigation />
         {categories.map(({ id, title, imageUrl }) => (
           <CategoryCard key={id} title={title} imageUrl={imageUrl} />
         ))}
