@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Button from './Button';
 import FormInput from './FormInput';
 
 const defaultFormFields = {
@@ -55,7 +56,9 @@ export default function SignUpForm() {
           name="confirmPassword"
           value={confirmPassword}
         />
-        <button type="submit">Sign Up</button>
+        <Button type="submit" buttonType="google">
+          Sign Up
+        </Button>
       </form>
     </div>
   );
