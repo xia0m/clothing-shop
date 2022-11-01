@@ -19,8 +19,8 @@ export default function SignUpForm() {
   };
 
   return (
-    <div>
-      <h2>{`Don't have an account?`}</h2>
+    <div className="flex flex-col w-[380px]">
+      <h2 className="my-[10px] mx-0 font-bold text-2xl">{`Don't have an account?`}</h2>
       <span>Sign up with your email and password</span>
       <form>
         <FormInput
