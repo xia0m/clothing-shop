@@ -40,7 +40,7 @@ export default function SignInForm() {
           name="password"
           value={password}
         />
-        <div className="buttons-container">
+        <div className="flex justify-between">
           <Button type="submit">Sign In</Button>
           <Button type="button" buttonType="google">
             Google sign in

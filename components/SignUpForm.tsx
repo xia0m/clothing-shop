@@ -56,9 +56,7 @@ export default function SignUpForm() {
           name="confirmPassword"
           value={confirmPassword}
         />
-        <Button type="submit" buttonType="google">
-          Sign Up
-        </Button>
+        <Button type="submit">Sign Up</Button>
       </form>
     </div>
   );
