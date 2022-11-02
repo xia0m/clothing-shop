@@ -9,7 +9,7 @@ type AppProps = {
 
 export default function FormInput({ label, ...otherProps }: AppProps) {
   return (
-    <div className="relative mx-[45px] my-0">
+    <div className="relative my-[45px] mx-0">
       <input
         className={`bg-none bg-white text-sub-color text-[18px] py-[10px] pr-[10px] pl-[5px] block w-full rounded-none border-b border-solid border-sub-color my-[25px] mx-0 focus:outline-0 peer ${
           otherProps.type === 'password' ? 'tracking-[.3em]' : ''
