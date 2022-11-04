@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 type AppProps = {
   children: ReactNode;
   buttonType?: string;
-  type: 'button' | 'submit' | 'reset' | undefined;
+  type?: 'button' | 'submit' | 'reset' | undefined;
 };
 
 const buttonTypeStyle = {
