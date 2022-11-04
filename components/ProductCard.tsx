@@ -2,7 +2,7 @@ import Button from './Button';
 
 export interface IProduct {
   name: string;
-  price: string;
+  price: number;
   imageUrl: string;
 }
 
