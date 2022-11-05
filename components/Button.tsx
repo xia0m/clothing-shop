@@ -4,6 +4,7 @@ type AppProps = {
   children: ReactNode;
   buttonType?: string;
   type?: 'button' | 'submit' | 'reset' | undefined;
+  className?: string;
 };
 
 const buttonTypeStyle = {
