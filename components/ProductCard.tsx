@@ -10,7 +10,7 @@ export default function ProductCard({ product }: { product: IProduct }) {
   const { name, price, imageUrl } = product;
 
   return (
-    <div className="flex flex-col w-[380px]">
+    <div className="w-full flex flex-col h-[350px] align-middle relative">
       <img src={imageUrl} alt={`${name}`} />
       <div>
         <span>{name}</span>
