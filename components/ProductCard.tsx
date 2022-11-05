@@ -10,7 +10,7 @@ export default function ProductCard({ product }: { product: IProduct }) {
   const { name, price, imageUrl } = product;
 
   return (
-    <div className="w-full flex flex-col h-[350px] align-middle relative group">
+    <div className="w-full flex flex-col h-[350px] items-center relative group">
       <img
         src={imageUrl}
         alt={`${name}`}
@@ -22,7 +22,7 @@ export default function ProductCard({ product }: { product: IProduct }) {
       </div>
       <Button
         buttonType="inverted"
-        className="w=[80%] opacity-[0.7] absolute top-[255px] hidden group-hover:opacity-[0.85] group-hover:flex "
+        className="w-[80%] opacity-[0.7] absolute top-[255px] hidden group-hover:opacity-[0.85] group-hover:flex"
       >
         Add to cart
       </Button>
