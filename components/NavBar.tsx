@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment } from 'react';
+import CartIcon from './CartIcon';
 
 export default function NavBar() {
   return (
@@ -22,6 +23,7 @@ export default function NavBar() {
           >
             Sign In
           </Link>
+          <CartIcon />
         </div>
       </div>
     </Fragment>
