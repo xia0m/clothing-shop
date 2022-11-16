@@ -1,12 +1,10 @@
 import Image from 'next/image';
-import Layout from '../components/Layout';
-import ShopContent from '../components/ShopContent';
 
 export default function CartIcon() {
   return (
-    <div>
-      <Image src="/shopping-bag.svg" alt="logo" height={30} width={30} />
-      <span>0</span>
+    <div className="w-[45px] h-[45px] relative flex justify-center cursor-pointer items-center">
+      <Image src="/shopping-bag.svg" alt="logo" height={24} width={24} />
+      <span className="absolute text-[10px] font-bold bottom-[12px]">0</span>
     </div>
   );
 }
