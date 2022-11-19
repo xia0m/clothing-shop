@@ -1,10 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment } from 'react';
+import { useCartStore } from '../store/cartStore';
 import CartDropdown from './CartDropdown';
 import CartIcon from './CartIcon';
 
 export default function NavBar() {
+  const isCartOpen = useCartStore((store) => store.isCartOpen);
   return (
     <Fragment>
       <div className="h-[70px] w-full flex justify-between mb-[25px]">
@@ -26,7 +28,7 @@ export default function NavBar() {
           </Link>
           <CartIcon />
         </div>
-        <CartDropdown />
+        {isCartOpen && <CartDropdown />}
       </div>
     </Fragment>
   );
