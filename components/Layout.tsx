@@ -9,7 +9,7 @@ type AppProps = {
 
 export default function Layout({ children }: AppProps) {
   return (
-    <div className="Layout">
+    <div className="px-[40px] py-[20px] m-0">
       <NavBar />
       <div className="Content">{children}</div>
     </div>
