@@ -1,13 +1,13 @@
+import { CartItem, useCartStore } from '../store/cartStore';
 import Button from './Button';
 
-export interface IProduct {
-  name: string;
-  price: number;
-  imageUrl: string;
-}
-
-export default function ProductCard({ product }: { product: IProduct }) {
+export default function ProductCard({ product }: { product: CartItem }) {
   const { name, price, imageUrl } = product;
+  const addItemToCart = useCartStore((store) => store.addItemToCart);
+
+  const addProductToCart = () => {
+    addItemToCart(product);
+  };
 
   return (
     <div className="w-full flex flex-col h-[350px] items-center relative group">
@@ -23,6 +23,7 @@ export default function ProductCard({ product }: { product: IProduct }) {
       <Button
         buttonType="inverted"
         className="w-[80%] opacity-[0.7] absolute top-[255px] hidden group-hover:opacity-[0.85] group-hover:flex"
+        onClick={addProductToCart}
       >
         Add to cart
       </Button>

@@ -5,6 +5,7 @@ type AppProps = {
   buttonType?: string;
   type?: 'button' | 'submit' | 'reset' | undefined;
   className?: string;
+  onClick?: () => void;
 };
 
 export default function Button({
