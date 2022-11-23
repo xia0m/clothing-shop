@@ -5,8 +5,6 @@ export default function CartIcon() {
   const isCartOpen = useCartStore((store) => store.isCartOpen);
   const setIsCartOpen = useCartStore((store) => store.setIsCartOpen);
 
-  console.log('is cart open is', isCartOpen);
-
   const toggleCartDropdown = () => {
     setIsCartOpen(!isCartOpen);
   };
