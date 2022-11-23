@@ -1,6 +1,6 @@
 import create from 'zustand';
 
-export interface CartItem {
+export interface ICartItem {
   id: number;
   quantity: number;
   name: string;
@@ -11,8 +11,8 @@ export interface CartItem {
 export const useCartStore = create<{
   isCartOpen: boolean;
   setIsCartOpen: (value: boolean) => void;
-  cartItems: CartItem[];
-  addItemToCart: (product: CartItem) => void;
+  cartItems: ICartItem[];
+  addItemToCart: (product: ICartItem) => void;
 }>((set) => ({
   isCartOpen: false,
   setIsCartOpen: (value) => set({ isCartOpen: value }),
@@ -27,7 +27,7 @@ export const useCartStore = create<{
               ? { ...item, quantity: item.quantity + 1 }
               : item
           )
-        : [...state.cartItems, product];
+        : [...state.cartItems, { ...product, quantity: 1 }];
       return { ...state, cartItems: newCartItems };
     }),
 }));

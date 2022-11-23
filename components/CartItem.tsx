@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import { CartItem } from '../store/cartStore';
+import { ICartItem } from '../store/cartStore';
 
-export default function CartItem({ cartItem }: { cartItem: CartItem }) {
+export default function CartItem({ cartItem }: { cartItem: ICartItem }) {
   const { imageUrl, price, name, quantity } = cartItem;
-
+  console.log(cartItem);
   return (
     <div>
       <Image src={imageUrl} alt="logo" height={24} width={24} />
