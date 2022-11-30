@@ -14,6 +14,7 @@ export const useCartStore = create<{
   cartItems: ICartItem[];
   addItemToCart: (product: ICartItem) => void;
   removeCartItem: (product: ICartItem) => void;
+  clearCartItem: (id: number) => void;
 }>((set) => ({
   isCartOpen: false,
   setIsCartOpen: (value) => set({ isCartOpen: value }),
@@ -46,5 +47,12 @@ export const useCartStore = create<{
         );
         return { ...state, cartItems: newCartItems };
       }
+    }),
+  clearCartItem: (id: number) =>
+    set((state) => {
+      return {
+        ...state,
+        cartItems: state.cartItems.filter((item) => item.id !== id),
+      };
     }),
 }));
