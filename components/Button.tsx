@@ -1,11 +1,11 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 type AppProps = {
   children: ReactNode;
   buttonType?: string;
   type?: 'button' | 'submit' | 'reset' | undefined;
   className?: string;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent) => void;
 };
 
 export default function Button({
