@@ -1,9 +1,15 @@
 import Link from 'next/link';
 import ProductCard from './ProductCard';
 
+export interface IProduct {
+  id: number;
+  name: string;
+  imageUrl: string;
+  price: number;
+}
 type AppProps = {
   title: string;
-  products: [];
+  products: IProduct[];
 };
 
 export default function CategoryPreview({ title, products }: AppProps) {
