@@ -14,11 +14,16 @@ type AppProps = {
 
 export default function CategoryPreview({ title, products }: AppProps) {
   return (
-    <div>
+    <div className="flex flex-col mb-[30px]">
       <h2>
-        <Link href={title}>{title}</Link>
+        <Link
+          className="text-[28px] mb-[25px] cursor-pointer"
+          href={`shop/${title}`}
+        >
+          {title}
+        </Link>
       </h2>
-      <div>
+      <div className="grid grid-cols-4 gap-x-[20px]">
         {products
           .filter((_, index) => index < 4)
           .map((product) => (
