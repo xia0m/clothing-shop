@@ -1,11 +1,18 @@
+import { useRouter } from 'next/router';
+
 type AppProps = {
   title: string;
   imageUrl: string;
+  onClick?: () => void;
 };
 
 export default function CategoryCard({ title, imageUrl }: AppProps) {
+  const router = useRouter();
   return (
-    <div className="min-w-[30%] h-[240px] flex-auto flex items-center justify-center border-solid border-black border mx-[7.5px] mt-0 mb-[15px] overflow-hidden hover:cursor-pointer first:mr-[7.5px] last:ml-[7.5px] group">
+    <div
+      className="min-w-[30%] h-[240px] flex-auto flex items-center justify-center border-solid border-black border mx-[7.5px] mt-0 mb-[15px] overflow-hidden hover:cursor-pointer first:mr-[7.5px] last:ml-[7.5px] group"
+      onClick={() => router.push(`/shop/${title}`)}
+    >
       <div
         style={{ backgroundImage: `url(${imageUrl})` }}
         className="group-hover:scale-[1.1] group-hover:transition-transform group-hover:duration-[6s] group-hover:ease-[cubic-bezier(0.25,0.45,0.45,0.95)] w-full h-full bg-center bg-cover"

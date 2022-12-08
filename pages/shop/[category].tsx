@@ -1,13 +1,7 @@
-import Head from 'next/head';
-import Image from 'next/image';
 import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
 import PRODUCTS from '../../assets/shop-data.js';
 import ProductCard from '../../components/ProductCard';
-
-type AppProps = {
-  title: string;
-};
 
 export default function Category() {
   const router = useRouter();
