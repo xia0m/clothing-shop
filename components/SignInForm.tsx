@@ -1,4 +1,8 @@
 import { useState } from 'react';
+import {
+  createUserDocumentFromAuth,
+  signInWithGooglePopup,
+} from '../store/firebase';
 import Button from './Button';
 import FormInput from './FormInput';
 
@@ -17,6 +21,13 @@ export default function SignInForm() {
     const { name, value } = event.target;
 
     setFormFields({ ...formFields, [name]: value });
+  };
+
+  const GoogleSignIn = async () => {
+    const { user } = await signInWithGooglePopup();
+    const userDocRef = await createUserDocumentFromAuth(user);
+    console.log('user is ', user);
+    console.log('userdocref is ', userDocRef);
   };
 
   return (
@@ -42,7 +53,7 @@ export default function SignInForm() {
         />
         <div className="flex justify-between">
           <Button type="submit">Sign In</Button>
-          <Button type="button" buttonType="google">
+          <Button onClick={GoogleSignIn} type="button" buttonType="google">
             Google sign in
           </Button>
         </div>
